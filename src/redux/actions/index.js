@@ -1,15 +1,21 @@
-import LOADING from '../actionConstants/index'
-export const fetchDetails = () => {
+import { api } from '../../services/config'
+
+export const fetchDataStart = () => {
   return {
-    type: 'FETCH',
-    payload: 'this is something',
+    type: 'FETCH_DATA_START',
   }
 }
 
-export const stopLoading = () => {
-  return (dispatch) => {
-    dispatch({
-      type: LOADING,
-    })
+export const fetchDataSuccess = (data) => {
+  return {
+    type: 'FETCH_DATA_SUCCESS',
+    payload: {
+      data,
+    },
   }
+}
+
+export async function fetchData(dispatch) {
+  const response = await api.get('/webdev/assignment')
+  dispatch(fetchDataSuccess(response.data))
 }

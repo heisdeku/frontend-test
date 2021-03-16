@@ -1,16 +1,17 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import { connect } from 'react-redux'
-import { fetchDetails } from '../../redux/actions/'
 
-const Profile = () => {
-  return <div>this is the order page</div>
+import ProfilePage from '../../components/Profile'
+const Profile = ({ user }) => {
+  return (
+    <div>
+      <ProfilePage userDeets={user} />
+    </div>
+  )
 }
-const mapStateToProps = ({ user }) => ({
-  value: user,
-})
-
-const mapDispatchToProps = (dispatch) => ({
-  fetchUser: () => dispatch(fetchDetails()),
-})
-
-export default connect(mapStateToProps, mapDispatchToProps)(Profile)
+const mapStateToProps = ({ data }) => {
+  return {
+    user: data.info,
+  }
+}
+export default connect(mapStateToProps)(Profile)

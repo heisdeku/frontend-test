@@ -1,16 +1,18 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { fetchDetails } from '../../redux/actions/'
+import { Orders } from '../../components/Orders'
+import RestaurantDetails from '../../components/RestaurantDetails'
 
-const OrderSummary = () => {
-  return <div>this is the order page</div>
+const OrderSummary = ({ orders }) => {
+  return (
+    <div>
+      <RestaurantDetails />
+      <Orders orders={orders} />
+    </div>
+  )
 }
-const mapStateToProps = ({ order }) => ({
-  value: order,
+const mapStateToProps = ({ data }) => ({
+  orders: data.info.items,
 })
 
-const mapDispatchToProps = (dispatch) => ({
-  fetchOrder: () => dispatch(fetchDetails()),
-})
-
-export default connect(mapStateToProps, mapDispatchToProps)(OrderSummary)
+export default connect(mapStateToProps)(OrderSummary)
