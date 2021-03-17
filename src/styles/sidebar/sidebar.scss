@@ -1,12 +1,64 @@
 .sidebar {
-  height: 100%;
   background-color: $bgColor;
+  height: 100vh;
+  position: fixed;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+  width: calc(160px + 4%);
+  padding-left: 40px;
+  .main-title {
+    font-size: 17px;
+    margin-top: 10px;
+  }
 }
-.link {
+.other-links {
+  width: 20%;
+  justify-content: space-between;
+}
+.links {
   display: block;
-  text-align: center;
+  padding-top: 60px;
   width: 100%;
   font-size: 20px;
   margin-bottom: 0.8rem;
-  height: 35px;
+  .link {
+    display: flex;
+    padding: 2px 0;
+    margin-bottom: 25px;
+    position: relative;
+    cursor: pointer;
+    .desc {
+      font-weight: 600;
+      font-size: 14px;
+      position: absolute;
+      left: 40px;
+      color: #7c7a7a;
+    }
+  }
+}
+.tools-con {
+  padding-top: 170px;
+  hr {
+    margin-right: 30px;
+    border: 0.2px solid #7c7a7a;
+  }
+  .tools {
+    color: #7c7a7a;
+    padding-top: 15px;
+    .tool {
+      position: relative;
+      display: flex;
+      padding: 2px 0;
+      margin-bottom: 20px;
+      cursor: pointer;
+      .desc {
+        position: absolute;
+        left: 40px;
+        font-weight: 600;
+        font-size: 14px;
+      }
+      .first-desc {
+        top: 4px;
+      }
+    }
+  }
 }
