@@ -11,3 +11,12 @@ export const getProductTotalWithTax = (price, quantity, tax) => {
 export const getAllProductsTotal = (products) => {
   return products.reduce((initial, product) => initial + product.price, 0)
 }
+
+export const getAllProductsTotalWithTax = (products) => {
+  return products.reduce(
+    (initial, product) =>
+      initial +
+      getProductTotalWithTax(product.price, product.quantity, product.tax_pct),
+    0
+  )
+}
