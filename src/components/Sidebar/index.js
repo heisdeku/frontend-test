@@ -59,7 +59,7 @@ export const Sidebar = () => {
                 fill='#7C7A7A'
               />
             </svg>
-            <div class='desc first-desc'>Settings</div>
+            <div className='desc first-desc'>Settings</div>
           </div>
           <div className='tool'>
             <svg
@@ -74,7 +74,7 @@ export const Sidebar = () => {
                 fill='#7C7A7A'
               />
             </svg>
-            <div class='desc'>Logout</div>
+            <div className='desc'>Logout</div>
           </div>
         </div>
       </div>

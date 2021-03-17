@@ -1,17 +1,37 @@
-import React, { useMemo } from 'react'
-import { connect } from 'react-redux'
-
-import ProfilePage from '../../components/Profile'
-const Profile = ({ user }) => {
+import React, { useEffect, Suspense } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { fetchData, fetchDataStart } from '../../redux/actions'
+const ProfilePage = React.lazy(() => import('../../components/Profile'))
+const Profile = () => {
+  const dispatch = useDispatch()
+  useEffect(() => {
+    dispatch(fetchDataStart())
+    dispatch(fetchData())
+  }, [dispatch])
+  const userDeets = useSelector((state) => state.data)
+  console.log(userDeets)
+  const { loading, error } = userDeets
   return (
-    <div>
-      <ProfilePage userDeets={user} />
-    </div>
+    <Suspense fallback='<div>loading...</div>'>
+      {loading ? (
+        <div className='loader-container hide'>
+          <div className='loader donut'></div>
+          <p>Loading .....</p>
+        </div>
+      ) : error ? (
+        <p
+          style={{
+            marginLeft: 'calc(160px + 8%',
+            width: 'calc(100vw - (160px + 4%)',
+            padding: '10px 4%',
+          }}
+        >
+          {error}
+        </p>
+      ) : (
+        <ProfilePage userDeets={userDeets} />
+      )}
+    </Suspense>
   )
 }
-const mapStateToProps = ({ data }) => {
-  return {
-    user: data.info,
-  }
-}
-export default connect(mapStateToProps)(Profile)
+export default Profile
