@@ -1,0 +1,27 @@
+.restaurant-details {
+  position: sticky;
+  z-index: 99999;
+  top: 0;
+  width: 70%;
+  height: 190px;
+  border-radius: 8px;
+  background-color: #dcd3f7;
+  span {
+    color: #06101e;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  div {
+    justify-content: space-between;
+    margin: 25px 8px 0;
+    p {
+      font-size: 16px;
+      line-break: anywhere;
+      margin-left: 20px;
+    }
+  }
+}
+.restaurant-name {
+  margin-top: 20px;
+  margin-left: 10px;
+}

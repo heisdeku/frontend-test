@@ -23,23 +23,28 @@ export const OrderProduct = ({
           <p>Category</p>
         </div>
         <div className='flex order-product__element'>
-          <h5>{currency}</h5>
-          <p>Purchase Currency</p>
+          <h5>{price}</h5>
+          <p>Price(unit)</p>
         </div>
       </div>
-      <div className='order-product__tax'>
-        <p>{tax_pct}</p>
+      <div className='order-product__quantity'>
+        <h5>Quantity</h5>
+        <p>{quantity}</p>
       </div>
       <div className='order-product__total'>
         <h5>Order Total</h5>
-        <p>{getProductTotal(price, quantity)}</p>
+        <p>
+          {`${currency} 
+          ${getProductTotal(price, quantity)}`}
+        </p>
       </div>
       <div className='order-product__total'>
         <h5>Order Total With Tax</h5>
-        <p>{getProductTotalWithTax(price, quantity, tax_pct)}</p>
+        <p>
+          {`${currency}  
+          ${getProductTotalWithTax(price, quantity, tax_pct)}`}
+        </p>
       </div>
-      <p>{price}</p>
-      <p>{quantity}</p>
     </div>
   )
 }

@@ -6,12 +6,16 @@ import { ContentBox } from '../ContentBox'
 import './Profile.scss'
 const ProfilePage = ({
   userDeets: {
-    user: { name, id, address, phone, about, likes, dislikes },
+    data: {
+      user: { name, id, address, phone, about, likes, dislikes },
+    },
   },
 }) => {
   return (
     <div className='profile-container w-fill'>
-      <p className='user-welcome'>Welcome, {name}</p>
+      <p className='user-welcome'>
+        Welcome, <b>{name}</b>
+      </p>
       <div className='flex main-container'>
         <div className='w-20'>
           <img src={Avatar} className='user-avatar' alt='User' />
@@ -26,7 +30,7 @@ const ProfilePage = ({
               <span>Your ID: ${id}</span>
             </div>
           </div>
-          <div className='group-inner'>
+          <div className='group-inner group-2'>
             <span>About: </span>
             <p>{about}</p>
           </div>

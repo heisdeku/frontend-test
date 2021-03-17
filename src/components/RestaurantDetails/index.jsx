@@ -1,16 +1,20 @@
 import React from 'react'
 import { connect } from 'react-redux'
-
-import { fetchDetails } from '../../redux/actions/'
-import ProfilePage from '../../components/Profile'
+import './RestaurantDetails.scss'
 const RestaurantDetails = ({ name, street, city, state, zipcode }) => {
   return (
-    <div>
-      <h3>{name}</h3>
-      <p>
-        We are located at: {street} in the city: {city} of {state}
-      </p>
-      <p>our zipcode is {zipcode}</p>
+    <div className='restaurant-details flex flex-col'>
+      <h3 className='restaurant-name'>{name}</h3>
+      <div className='flex'>
+        <span>Location:</span>
+        <p>
+          at{street} in the city: {city} of {state}
+        </p>
+      </div>
+      <div className='flex'>
+        <span>Zip Code:</span>
+        <p>{zipcode}</p>
+      </div>
     </div>
   )
 }
