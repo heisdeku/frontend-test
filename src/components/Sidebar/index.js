@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 export const Sidebar = () => {
   return (
-    <div className='sidebar flex flex-col w-15'>
+    <div className='sidebar flex flex-col w-20'>
       <p className='link'>
         {' '}
         <Link to='/profile'>My Account</Link>

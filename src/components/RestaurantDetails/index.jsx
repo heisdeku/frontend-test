@@ -3,9 +3,7 @@ import { connect } from 'react-redux'
 
 import { fetchDetails } from '../../redux/actions/'
 import ProfilePage from '../../components/Profile'
-const RestaurantDetails = ({
-  restaurant: { name, street, city, state, zipcode },
-}) => {
+const RestaurantDetails = ({ name, street, city, state, zipcode }) => {
   return (
     <div>
       <h3>{name}</h3>
