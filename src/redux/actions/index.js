@@ -14,8 +14,21 @@ export const fetchDataSuccess = (data) => {
     },
   }
 }
-
-export async function fetchData(dispatch) {
-  const response = await api.get('/webdev/assignment')
-  dispatch(fetchDataSuccess(response.data))
+export const fetchDataFailed = (message) => {
+  return {
+    type: 'FETCH_DATA_FAILED',
+    payload: {
+      message,
+    },
+  }
+}
+export function fetchData() {
+  return (dispatch) => {
+    const response = api.get('/webdev/assignment')
+    response
+      .then((resp) => {
+        dispatch(fetchDataSuccess(resp.data))
+      })
+      .catch((err) => dispatch(fetchDataFailed(err.message)))
+  }
 }
