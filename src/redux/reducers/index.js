@@ -1,4 +1,4 @@
-const initialState = {
+/*const initialState = {
   loading: true,
   data: {
     order_id: '2432efa2',
@@ -54,7 +54,7 @@ const initialState = {
       dislikes: ['fish', 'rum', 'oriental'],
     },
   },
-}
+}*/
 const init = {
   loading: false,
   data: {},
