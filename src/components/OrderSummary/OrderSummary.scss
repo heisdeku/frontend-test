@@ -1,0 +1,12 @@
+.order-summary {
+  padding: 40px 0;
+  div {
+    border-bottom: 1px solid #cecece;
+    height: 40px;
+    align-items: center;
+    justify-content: space-between;
+    p {
+      font-weight: 600;
+    }
+  }
+}
