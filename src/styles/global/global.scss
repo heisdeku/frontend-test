@@ -13,8 +13,8 @@
   @extend .flex-col;
   flex-wrap: nowrap;
 }
-.w-15 {
-  width: 25%;
+.w-20 {
+  width: 20%;
 }
 .w-50 {
   width: 25%;
@@ -27,4 +27,28 @@
 }
 .p-25 {
   padding: 1.25rem;
+}
+
+.loader-container {
+  margin-left: calc(160px + 8%);
+  width: calc(100vw - (160px + 4%));
+  padding: 10px 4%;
+  display: grid;
+  place-items: center;
+}
+
+.loader.donut {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  border: 0.3rem solid transparent;
+  border-top-color: #dcd3f7;
+  border-right-color: #dcd3f7;
+  animation: 1.5s spin infinite cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
 }

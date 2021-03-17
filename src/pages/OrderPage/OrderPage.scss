@@ -1,0 +1,33 @@
+.order {
+  &-page {
+    margin-left: calc(160px + 8%);
+    width: calc(100vw - (160px + 4%));
+    padding: 10px 4%;
+    justify-content: space-between;
+  }
+  &__section {
+    &-1 {
+      width: 50%;
+      position: relative;
+      padding-left: 40px;
+      overflow-y: scroll;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      &::-webkit-scrollbar-thumb {
+        display: none;
+      }
+      &::-webkit-scrollbar-track {
+        background: transparent;
+      }
+    }
+    &-2 {
+      width: 30%;
+      border: 1px solid #cecece;
+      padding: 25px 3% 0;
+      height: 45vh;
+      display: flex;
+      flex-flow: column wrap;
+    }
+  }
+}

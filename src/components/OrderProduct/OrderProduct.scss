@@ -1,0 +1,34 @@
+.order-product {
+  padding: 0 20px;
+  &__top {
+    span {
+      align-self: flex-end;
+      font-size: 12px;
+      color: #06101e;
+    }
+  }
+  &__element {
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 0;
+    h3 {
+      font-size: 24px;
+      font-weight: 700;
+    }
+    h5 {
+      font-size: 14px;
+      font-weight: bold;
+    }
+    p {
+      font-size: 12px;
+      color: #06101e;
+    }
+  }
+  &__quantity {
+    color: #06101e;
+    padding: 10px 0;
+  }
+  &__total {
+    @extend .order-product__quantity;
+  }
+}
