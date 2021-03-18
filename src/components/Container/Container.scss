@@ -12,6 +12,9 @@
     line-height: 135.86%;
     text-transform: capitalize;
   }
+  @media (max-width: 500px) {
+    min-height: 100px !important;
+  }
 }
 .container p {
   margin: 10px 0;

@@ -1,5 +1,5 @@
-/*const initialState = {
-  loading: true,
+const initialState = {
+  loading: false,
   data: {
     order_id: '2432efa2',
     restaurant: {
@@ -54,14 +54,14 @@
       dislikes: ['fish', 'rum', 'oriental'],
     },
   },
-}*/
+}
 const init = {
   loading: false,
   data: {},
   error: null,
 }
 
-export default (state = init, action) => {
+export default (state = initialState, action) => {
   switch (action.type) {
     case 'FETCH_DATA_START':
       return {

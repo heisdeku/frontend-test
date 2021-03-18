@@ -4,6 +4,13 @@
     width: calc(100vw - (160px + 4%));
     padding: 10px 4%;
     justify-content: space-between;
+    @media (max-width: 500px) {
+      width: 100vw;
+      margin-left: 0;
+      margin-top: 65px;
+      flex-direction: column;
+      height: fit-content;
+    }
   }
   &__section {
     &-1 {
@@ -20,14 +27,23 @@
       &::-webkit-scrollbar-track {
         background: transparent;
       }
+      @media (max-width: 500px) {
+        width: 100%;
+        padding-left: 0;
+        height: 100%;
+      }
     }
     &-2 {
       width: 30%;
       border: 1px solid #cecece;
       padding: 25px 3% 0;
-      height: 45vh;
+      height: 55vh;
       display: flex;
       flex-flow: column;
+      @media (max-width: 500px) {
+        width: 90%;
+        height: fit-content;
+      }
     }
   }
 }

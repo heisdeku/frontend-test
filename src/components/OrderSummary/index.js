@@ -20,6 +20,7 @@ const OrderSummarySection = ({ orders }) => {
         <span>Total price (inc. Tax):</span>
         <p> {`${orders[0].currency} ${getAllProductsTotalWithTax(orders)}`}</p>
       </div>
+      <button className='order-btn'>Proceed to Order</button>
     </div>
   )
 }

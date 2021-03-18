@@ -6,6 +6,10 @@ body {
   height: 100vh;
   font-family: sans-serif;
   overflow: hidden;
+  @media (max-width: 500px) {
+    height: auto;
+    overflow: hidden scroll;
+  }
 }
 h1,
 h2,
