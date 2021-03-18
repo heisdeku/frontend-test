@@ -35,6 +35,11 @@
   padding: 10px 4%;
   display: grid;
   place-items: center;
+  @media (max-width: 500px) {
+    width: 100vw;
+    margin-left: 0;
+    padding: 0;
+  }
 }
 
 .loader.donut {
@@ -50,5 +55,19 @@
 @keyframes spin {
   to {
     transform: rotate(1turn);
+  }
+}
+.isError {
+  margin-left: calc(160px + 8%);
+  width: calc(100vw - (160px + 4%));
+  padding: 10px 4%;
+  font-size: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: 500px) {
+    width: 100vw;
+    margin-left: 0;
+    padding: 0;
   }
 }

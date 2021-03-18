@@ -1,5 +1,5 @@
 import React from 'react'
-import Avatar from '../../assets/images/user.png'
+//import Avatar from '../../assets/images/user.png'
 
 import { Container } from '../Container/index'
 import { ContentBox } from '../ContentBox'
@@ -18,7 +18,11 @@ const ProfilePage = ({
       </p>
       <div className='flex main-container'>
         <div className='w-20'>
-          <img src={Avatar} className='user-avatar' alt='User' />
+          <img
+            src='https://images.unsplash.com/photo-1504568758572-1c648768a420?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60'
+            className='user-avatar'
+            alt='User'
+          />
         </div>
         <div className='user-details w-75'>
           <div className='flex group-1'>

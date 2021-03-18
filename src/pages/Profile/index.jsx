@@ -3,11 +3,11 @@ import { useDispatch, useSelector } from 'react-redux'
 import { fetchData, fetchDataStart } from '../../redux/actions'
 const ProfilePage = React.lazy(() => import('../../components/Profile'))
 const Profile = () => {
-  /*const dispatch = useDispatch()
+  const dispatch = useDispatch()
   useEffect(() => {
     dispatch(fetchDataStart())
     dispatch(fetchData())
-  }, [dispatch])*/
+  }, [dispatch])
   const userDeets = useSelector((state) => state.data)
   console.log(userDeets)
   const { loading, error } = userDeets
@@ -19,13 +19,7 @@ const Profile = () => {
           <p>Loading .....</p>
         </div>
       ) : error ? (
-        <p
-          style={{
-            marginLeft: 'calc(160px + 8%',
-            width: 'calc(100vw - (160px + 4%)',
-            padding: '10px 4%',
-          }}
-        >
+        <p className='isError' style={{}}>
           {error}
         </p>
       ) : (

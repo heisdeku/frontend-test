@@ -1,5 +1,5 @@
 import React from 'react'
-import Avatar from '../../assets/images/user.png'
+//import Avatar from '../../assets/images/user.png'
 
 //import './Profile.scss'
 const OrderUser = ({ name, id, address }) => {
@@ -8,7 +8,11 @@ const OrderUser = ({ name, id, address }) => {
       <div className='main-container order-user'>
         <div className='flex'>
           <div className='w-20'>
-            <img src={Avatar} className='user-avatar' alt='User' />
+            <img
+              src='https://images.unsplash.com/photo-1504568758572-1c648768a420?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60'
+              className='user-avatar'
+              alt='User'
+            />
           </div>
           <div className='flex group-1 w-75'>
             <div className='order__user-group-inner'>
